@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import Image from 'next/image';
+//import Image from 'next/image';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
