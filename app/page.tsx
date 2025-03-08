@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { MapPin, Phone, Calendar, Star, Coffee, Wifi, Car, ShoppingBag, HomeIcon } from 'lucide-react';
+import { MapPin, Phone, Star, Coffee, Wifi, Car, ShoppingBag, HomeIcon } from 'lucide-react';
 
 // Define language type
 type LanguageCode = 'en' | 'sr';
