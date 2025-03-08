@@ -132,19 +132,19 @@ export default function Home() {
     ]
   };
 
-  // // Contact information
-  // const contactInfo = {
-  //   en: {
-  //     phone: "(+381) 123-4567",
-  //     callHours: "9:00 AM - 6:00 PM, Monday to Friday"
-  //   },
-  //   sr: {
-  //     phone: "+381 11 123-4567",
-  //     callHours: "9:00 - 18:00, Ponedeljak do Petak"
-  //   }
-  // };
+  // Contact information
+  const contactInfo = {
+    en: {
+      phone: "(+381) 123-4567",
+      callHours: "9:00 AM - 6:00 PM, Monday to Friday"
+    },
+    sr: {
+      phone: "+381 11 123-4567",
+      callHours: "9:00 - 18:00, Ponedeljak do Petak"
+    }
+  };
 
-  // Current language data
+  //Current language data
   const t = translations[language];
   const apartments = apartmentsData[language];
   const contact = contactInfo[language];
