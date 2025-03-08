@@ -4,10 +4,13 @@ import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 //import Image from 'next/image';
 
+// Define language type
+type LanguageCode = 'en' | 'sr';
+
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedApartment, setSelectedApartment] = useState(0);
-  const [language, setLanguage] = useState('sr'); // 'sr' for Serbian, 'en' for English
+  const [language, setLanguage] = useState<LanguageCode>('sr'); // 'sr' for Serbian, 'en' for English
   
   // Multilingual content
   const translations = {
