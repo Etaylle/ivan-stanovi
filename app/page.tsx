@@ -61,9 +61,9 @@ export default function Home() {
         amenities: ["Air Conditioning", "High-Speed Internet", "Dishwasher", "Laundry in Building", "Parking Space"],
         description: "A charming and well-maintained apartment in the heart of downtown. Walking distance to restaurants, shops, and public transportation.",
         images: [
-          "./public/images/2.jpg",
-          "./public/images/3.jpg",
-          "./public/images/4.jpg"
+          "/images/2.jpg",
+          "/images/3.jpg",
+          "/images/4.jpg"
         ],
         availability: {
           available: ["2025-03-10", "2025-03-11", "2025-03-12"],
@@ -80,9 +80,9 @@ export default function Home() {
         amenities: ["Balcony", "Garden View", "In-unit Washer/Dryer", "Stainless Steel Appliances", "Central Heating"],
         description: "A bright and spacious apartment overlooking our beautifully maintained garden. Enjoy peaceful mornings and evenings on your private balcony.",
         images: [
-          "/placeholder1.jpg",
-          "/placeholder2.jpg",
-          "/placeholder3.jpg"
+          "/images/2.jpg",
+          "/images/3.jpg",
+          "/images/4.jpg"
         ],
         availability: {
           available: ["2025-03-09", "2025-03-10", "2025-03-11"],
@@ -101,9 +101,9 @@ export default function Home() {
         amenities: ["Klima uređaj", "Brzi internet", "Mašina za sudove", "Vešernica u zgradi", "Parking mesto"],
         description: "Šarmantan i dobro održavan apartman u srcu grada. Restorani, prodavnice i javni prevoz na pešačkoj udaljenosti.",
         images: [
-          "./public/images/2.jpg",
-          "./public/images/3.jpg",
-          "./public/images/4.jpg"
+          "/images/2.jpg",
+          "/images/3.jpg",
+          "/images/4.jpg"
         ],
         availability: {
           available: ["2025-03-10", "2025-03-11", "2025-03-12"],
@@ -120,9 +120,9 @@ export default function Home() {
         amenities: ["Balkon", "Pogled na baštu", "Veš mašina/sušilica u stanu", "Uređaji od nerđajućeg čelika", "Centralno grejanje"],
         description: "Svetao i prostran apartman sa pogledom na našu lepo održavanu baštu. Uživajte u mirnim jutrima i večerima na vašem privatnom balkonu.",
         images: [
-          "/placeholder1.jpg",
-          "/placeholder2.jpg",
-          "/placeholder3.jpg"
+          "/images/2.jpg",
+          "/images/3.jpg",
+          "/images/4.jpg"
         ],
         availability: {
           available: ["2025-03-09", "2025-03-10", "2025-03-11"],
