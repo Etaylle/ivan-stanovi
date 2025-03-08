@@ -345,13 +345,13 @@ export default function Home() {
             </CardContent>
           </Card>
           
-          {/* Contact Information */}
+          {/* Contact Information
           <div className="bg-blue-50 p-4 rounded-lg mb-6">
             <h3 className="text-lg font-semibold mb-2">{t.viewingArrange}</h3>
             <p className="text-blue-800 font-bold text-xl">{contact.phone}</p>
             <p className="text-sm text-gray-600">{t.callHours}: {contact.callHours}</p>
             <p className="text-sm italic mt-2">{t.phoneOnlyNote}</p>
-          </div>
+          </div> */}
           
           {/* Calendar */}
           {renderCalendar()}
