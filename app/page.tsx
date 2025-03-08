@@ -7,55 +7,144 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedApartment, setSelectedApartment] = useState(0);
+  const [language, setLanguage] = useState('sr'); // 'sr' for Serbian, 'en' for English
+  
+  // Multilingual content
+  const translations = {
+    en: {
+      title: "Luxury Apartments for Rent",
+      subtitle: "Find your perfect home in our beautiful properties",
+      contactTitle: "Contact Information",
+      callHours: "Call hours",
+      viewingArrange: "Contact Us to Arrange a Viewing",
+      phoneOnlyNote: "Note: Apartment viewings are arranged by phone call only",
+      calendar: "Availability Calendar",
+      available: "Available",
+      booked: "Booked",
+      bedrooms: "Bedrooms",
+      bathrooms: "Bathrooms",
+      amenities: "Amenities",
+      footer: "© 2025 Luxury Apartments. All rights reserved.",
+      toggleLanguage: "Srpski"
+    },
+    sr: {
+      title: "Luksuzni Apartmani za Izdavanje",
+      subtitle: "Pronađite savršen dom u našim prelijepim nekretninama",
+      contactTitle: "Kontakt Informacije",
+      callHours: "Radno vreme za pozive",
+      viewingArrange: "Kontaktirajte nas da zakažete razgledanje",
+      phoneOnlyNote: "Napomena: Razgledanje apartmana se zakazuje isključivo telefonom",
+      calendar: "Kalendar dostupnosti",
+      available: "Slobodno",
+      booked: "Zauzeto",
+      bedrooms: "Spavaće sobe",
+      bathrooms: "Kupatila",
+      amenities: "Pogodnosti",
+      footer: "© 2025 Luksuzni Apartmani. Sva prava zadržana.",
+      toggleLanguage: "English"
+    }
+  };
   
   // Apartment data
-  const apartments = [
-    {
-      id: 1,
-      name: "Cozy Downtown Apartment",
-      price: "$1,200/month",
-      bedrooms: 2,
-      bathrooms: 1,
-      size: "850 sq ft",
-      amenities: ["Air Conditioning", "High-Speed Internet", "Dishwasher", "Laundry in Building", "Parking Space"],
-      description: "A charming and well-maintained apartment in the heart of downtown. Walking distance to restaurants, shops, and public transportation.",
-      images: [
-        "/placeholder1.jpg",
-        "/placeholder2.jpg",
-        "/placeholder3.jpg"
-      ],
-      availability: {
-        // Example data - you would update this as needed
-        available: ["2025-03-10", "2025-03-11", "2025-03-12"],
-        booked: ["2025-03-15", "2025-03-16", "2025-03-17", "2025-03-18"]
+  const apartmentsData = {
+    en: [
+      {
+        id: 1,
+        name: "Cozy Downtown Apartment",
+        price: "$1,200/month",
+        bedrooms: 2,
+        bathrooms: 1,
+        size: "850 sq ft",
+        amenities: ["Air Conditioning", "High-Speed Internet", "Dishwasher", "Laundry in Building", "Parking Space"],
+        description: "A charming and well-maintained apartment in the heart of downtown. Walking distance to restaurants, shops, and public transportation.",
+        images: [
+          "/placeholder1.jpg",
+          "/placeholder2.jpg",
+          "/placeholder3.jpg"
+        ],
+        availability: {
+          available: ["2025-03-10", "2025-03-11", "2025-03-12"],
+          booked: ["2025-03-15", "2025-03-16", "2025-03-17", "2025-03-18"]
+        }
+      },
+      {
+        id: 2,
+        name: "Spacious Garden View Apartment",
+        price: "$1,450/month",
+        bedrooms: 3,
+        bathrooms: 2,
+        size: "1100 sq ft",
+        amenities: ["Balcony", "Garden View", "In-unit Washer/Dryer", "Stainless Steel Appliances", "Central Heating"],
+        description: "A bright and spacious apartment overlooking our beautifully maintained garden. Enjoy peaceful mornings and evenings on your private balcony.",
+        images: [
+          "/placeholder1.jpg",
+          "/placeholder2.jpg",
+          "/placeholder3.jpg"
+        ],
+        availability: {
+          available: ["2025-03-09", "2025-03-10", "2025-03-11"],
+          booked: ["2025-03-20", "2025-03-21", "2025-03-22", "2025-03-23"]
+        }
       }
-    },
-    {
-      id: 2,
-      name: "Spacious Garden View Apartment",
-      price: "$1,450/month",
-      bedrooms: 3,
-      bathrooms: 2,
-      size: "1100 sq ft",
-      amenities: ["Balcony", "Garden View", "In-unit Washer/Dryer", "Stainless Steel Appliances", "Central Heating"],
-      description: "A bright and spacious apartment overlooking our beautifully maintained garden. Enjoy peaceful mornings and evenings on your private balcony.",
-      images: [
-        "/placeholder1.jpg",
-        "/placeholder2.jpg",
-        "/placeholder3.jpg"
-      ],
-      availability: {
-        available: ["2025-03-09", "2025-03-10", "2025-03-11"],
-        booked: ["2025-03-20", "2025-03-21", "2025-03-22", "2025-03-23"]
+    ],
+    sr: [
+      {
+        id: 1,
+        name: "Udoban Apartman u Centru",
+        price: "1.200€/mesečno",
+        bedrooms: 2,
+        bathrooms: 1,
+        size: "79 m²",
+        amenities: ["Klima uređaj", "Brzi internet", "Mašina za sudove", "Vešernica u zgradi", "Parking mesto"],
+        description: "Šarmantan i dobro održavan apartman u srcu grada. Restorani, prodavnice i javni prevoz na pešačkoj udaljenosti.",
+        images: [
+          "/placeholder1.jpg",
+          "/placeholder2.jpg",
+          "/placeholder3.jpg"
+        ],
+        availability: {
+          available: ["2025-03-10", "2025-03-11", "2025-03-12"],
+          booked: ["2025-03-15", "2025-03-16", "2025-03-17", "2025-03-18"]
+        }
+      },
+      {
+        id: 2,
+        name: "Prostran Apartman sa Pogledom na Baštu",
+        price: "1.450€/mesečno",
+        bedrooms: 3,
+        bathrooms: 2,
+        size: "102 m²",
+        amenities: ["Balkon", "Pogled na baštu", "Veš mašina/sušilica u stanu", "Uređaji od nerđajućeg čelika", "Centralno grejanje"],
+        description: "Svetao i prostran apartman sa pogledom na našu lepo održavanu baštu. Uživajte u mirnim jutrima i večerima na vašem privatnom balkonu.",
+        images: [
+          "/placeholder1.jpg",
+          "/placeholder2.jpg",
+          "/placeholder3.jpg"
+        ],
+        availability: {
+          available: ["2025-03-09", "2025-03-10", "2025-03-11"],
+          booked: ["2025-03-20", "2025-03-21", "2025-03-22", "2025-03-23"]
+        }
       }
-    }
-  ];
+    ]
+  };
 
   // Contact information
   const contactInfo = {
-    phone: "(555) 123-4567",
-    callHours: "9:00 AM - 6:00 PM, Monday to Friday"
+    en: {
+      phone: "(555) 123-4567",
+      callHours: "9:00 AM - 6:00 PM, Monday to Friday"
+    },
+    sr: {
+      phone: "+381 11 123-4567",
+      callHours: "9:00 - 18:00, Ponedeljak do Petak"
+    }
   };
+
+  // Current language data
+  const t = translations[language];
+  const apartments = apartmentsData[language];
+  const contact = contactInfo[language];
 
   // Handle image carousel navigation
   const nextSlide = () => {
@@ -68,6 +157,11 @@ export default function Home() {
     setCurrentSlide((prev) => 
       prev === 0 ? apartments[selectedApartment].images.length - 1 : prev - 1
     );
+  };
+
+  // Toggle language
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'sr' : 'en');
   };
 
   // Simplified calendar component to show availability
@@ -94,20 +188,26 @@ export default function Home() {
       );
     }
     
+    // Get month name in the current language
+    const monthNames = {
+      en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      sr: ["Januar", "Februar", "Mart", "April", "Maj", "Jun", "Jul", "Avgust", "Septembar", "Oktobar", "Novembar", "Decembar"]
+    };
+    
     return (
       <div className="mt-4">
-        <h3 className="text-lg font-semibold mb-2">Availability Calendar (March 2025)</h3>
+        <h3 className="text-lg font-semibold mb-2">{t.calendar} ({monthNames[language][month]} {year})</h3>
         <div className="flex flex-wrap">
           {days}
         </div>
         <div className="flex mt-2 text-sm">
           <div className="flex items-center mr-4">
             <div className="w-4 h-4 bg-green-200 mr-1"></div>
-            <span>Available</span>
+            <span>{t.available}</span>
           </div>
           <div className="flex items-center">
             <div className="w-4 h-4 bg-red-200 mr-1"></div>
-            <span>Booked</span>
+            <span>{t.booked}</span>
           </div>
         </div>
       </div>
@@ -116,18 +216,28 @@ export default function Home() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
+      {/* Language Toggle */}
+      <div className="flex justify-end mb-4">
+        <button 
+          onClick={toggleLanguage}
+          className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium hover:bg-blue-700"
+        >
+          {t.toggleLanguage}
+        </button>
+      </div>
+      
       {/* Header */}
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-blue-800 mb-2">Luxury Apartments for Rent</h1>
-        <p className="text-xl text-gray-600">Find your perfect home in our beautiful properties</p>
+        <h1 className="text-4xl font-bold text-blue-800 mb-2">{t.title}</h1>
+        <p className="text-xl text-gray-600">{t.subtitle}</p>
       </header>
 
       {/* Apartment Selection Tabs */}
-      <div className="flex mb-8">
+      <div className="flex mb-8 overflow-x-auto">
         {apartments.map((apartment, index) => (
           <button
             key={apartment.id}
-            className={`px-6 py-3 font-medium text-lg mr-2 rounded-t-lg ${
+            className={`px-6 py-3 font-medium text-lg mr-2 rounded-t-lg whitespace-nowrap ${
               selectedApartment === index 
                 ? 'bg-blue-600 text-white' 
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -199,10 +309,10 @@ export default function Home() {
           
           <div className="flex flex-wrap gap-4 mb-4">
             <div className="bg-gray-100 px-3 py-1 rounded">
-              {apartments[selectedApartment].bedrooms} Bedrooms
+              {apartments[selectedApartment].bedrooms} {t.bedrooms}
             </div>
             <div className="bg-gray-100 px-3 py-1 rounded">
-              {apartments[selectedApartment].bathrooms} Bathrooms
+              {apartments[selectedApartment].bathrooms} {t.bathrooms}
             </div>
             <div className="bg-gray-100 px-3 py-1 rounded">
               {apartments[selectedApartment].size}
@@ -211,7 +321,7 @@ export default function Home() {
           
           <p className="mb-4">{apartments[selectedApartment].description}</p>
           
-          <h3 className="text-lg font-semibold mb-2">Amenities</h3>
+          <h3 className="text-lg font-semibold mb-2">{t.amenities}</h3>
           <ul className="grid grid-cols-2 gap-2 mb-6">
             {apartments[selectedApartment].amenities.map((amenity, index) => (
               <li key={index} className="flex items-center">
@@ -220,21 +330,24 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <Card className="w-full">
-  <CardHeader>
-    <CardTitle>Contact Information</CardTitle>
-  </CardHeader>
-  <CardContent>
-    <p className="text-blue-800 font-bold text-xl">{contactInfo.phone}</p>
-    <p className="text-sm text-gray-600">Call hours: {contactInfo.callHours}</p>
-  </CardContent>
-</Card>
+          
+          {/* Contact Card */}
+          <Card className="w-full mb-6">
+            <CardHeader>
+              <CardTitle>{t.contactTitle}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-blue-800 font-bold text-xl">{contact.phone}</p>
+              <p className="text-sm text-gray-600">{t.callHours}: {contact.callHours}</p>
+            </CardContent>
+          </Card>
+          
           {/* Contact Information */}
           <div className="bg-blue-50 p-4 rounded-lg mb-6">
-            <h3 className="text-lg font-semibold mb-2">Contact Us to Arrange a Viewing</h3>
-            <p className="text-blue-800 font-bold text-xl">{contactInfo.phone}</p>
-            <p className="text-sm text-gray-600">Call hours: {contactInfo.callHours}</p>
-            <p className="text-sm italic mt-2">Note: Apartment viewings are arranged by phone call only</p>
+            <h3 className="text-lg font-semibold mb-2">{t.viewingArrange}</h3>
+            <p className="text-blue-800 font-bold text-xl">{contact.phone}</p>
+            <p className="text-sm text-gray-600">{t.callHours}: {contact.callHours}</p>
+            <p className="text-sm italic mt-2">{t.phoneOnlyNote}</p>
           </div>
           
           {/* Calendar */}
@@ -244,7 +357,7 @@ export default function Home() {
       
       {/* Footer */}
       <footer className="mt-16 pt-8 border-t border-gray-200 text-center text-gray-600">
-        <p>© 2025 Luxury Apartments. All rights reserved.</p>
+        <p>{t.footer}</p>
       </footer>
     </div>
   );
