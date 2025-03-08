@@ -54,16 +54,16 @@ export default function Home() {
       {
         id: 1,
         name: "Cozy Downtown Apartment",
-        price: "$1,200/month",
+        price: "22 €/day",
         bedrooms: 2,
         bathrooms: 1,
-        size: "850 sq ft",
+        size: "80 m²",
         amenities: ["Air Conditioning", "High-Speed Internet", "Dishwasher", "Laundry in Building", "Parking Space"],
         description: "A charming and well-maintained apartment in the heart of downtown. Walking distance to restaurants, shops, and public transportation.",
         images: [
-          "/placeholder1.jpg",
-          "/placeholder2.jpg",
-          "/placeholder3.jpg"
+          "./public/images/2.jpg",
+          "./public/images/3.jpg",
+          "./public/images/4.jpg"
         ],
         availability: {
           available: ["2025-03-10", "2025-03-11", "2025-03-12"],
@@ -73,10 +73,10 @@ export default function Home() {
       {
         id: 2,
         name: "Spacious Garden View Apartment",
-        price: "$1,450/month",
+        price: "22 €/day",
         bedrooms: 3,
         bathrooms: 2,
-        size: "1100 sq ft",
+        size: "88 m²",
         amenities: ["Balcony", "Garden View", "In-unit Washer/Dryer", "Stainless Steel Appliances", "Central Heating"],
         description: "A bright and spacious apartment overlooking our beautifully maintained garden. Enjoy peaceful mornings and evenings on your private balcony.",
         images: [
@@ -94,16 +94,16 @@ export default function Home() {
       {
         id: 1,
         name: "Udoban Apartman u Centru",
-        price: "1.200€/mesečno",
+        price: "22 €/dan",
         bedrooms: 2,
         bathrooms: 1,
-        size: "79 m²",
+        size: "80 m²",
         amenities: ["Klima uređaj", "Brzi internet", "Mašina za sudove", "Vešernica u zgradi", "Parking mesto"],
         description: "Šarmantan i dobro održavan apartman u srcu grada. Restorani, prodavnice i javni prevoz na pešačkoj udaljenosti.",
         images: [
-          "/placeholder1.jpg",
-          "/placeholder2.jpg",
-          "/placeholder3.jpg"
+          "./public/images/2.jpg",
+          "./public/images/3.jpg",
+          "./public/images/4.jpg"
         ],
         availability: {
           available: ["2025-03-10", "2025-03-11", "2025-03-12"],
@@ -113,10 +113,10 @@ export default function Home() {
       {
         id: 2,
         name: "Prostran Apartman sa Pogledom na Baštu",
-        price: "1.450€/mesečno",
+        price: "22 €/dan",
         bedrooms: 3,
         bathrooms: 2,
-        size: "102 m²",
+        size: "88 m²",
         amenities: ["Balkon", "Pogled na baštu", "Veš mašina/sušilica u stanu", "Uređaji od nerđajućeg čelika", "Centralno grejanje"],
         description: "Svetao i prostran apartman sa pogledom na našu lepo održavanu baštu. Uživajte u mirnim jutrima i večerima na vašem privatnom balkonu.",
         images: [
@@ -132,17 +132,17 @@ export default function Home() {
     ]
   };
 
-  // Contact information
-  const contactInfo = {
-    en: {
-      phone: "(555) 123-4567",
-      callHours: "9:00 AM - 6:00 PM, Monday to Friday"
-    },
-    sr: {
-      phone: "+381 11 123-4567",
-      callHours: "9:00 - 18:00, Ponedeljak do Petak"
-    }
-  };
+  // // Contact information
+  // const contactInfo = {
+  //   en: {
+  //     phone: "(+381) 123-4567",
+  //     callHours: "9:00 AM - 6:00 PM, Monday to Friday"
+  //   },
+  //   sr: {
+  //     phone: "+381 11 123-4567",
+  //     callHours: "9:00 - 18:00, Ponedeljak do Petak"
+  //   }
+  // };
 
   // Current language data
   const t = translations[language];
