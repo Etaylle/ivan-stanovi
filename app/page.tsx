@@ -15,7 +15,7 @@ export default function Home() {
   // Multilingual content
   const translations = {
     en: {
-      title: "Luxury Apartments for Rent",
+      title: "Apartments for Rent in Vrnjacka Banja",
       subtitle: "Find your perfect home in our beautiful properties",
       contactTitle: "Contact Information",
       callHours: "Call hours",
@@ -31,8 +31,8 @@ export default function Home() {
       toggleLanguage: "Srpski"
     },
     sr: {
-      title: "Luksuzni Apartmani za Izdavanje",
-      subtitle: "Pronađite savršen dom u našim prelijepim nekretninama",
+      title: "Apartmani za Izdavanje u Vrnjačkoj Banji",
+      subtitle: "Pronađite savršen smeštaj da upotpunite Vaš doživljaj tokom boravka",
       contactTitle: "Kontakt Informacije",
       callHours: "Radno vreme za pozive",
       viewingArrange: "Kontaktirajte nas da zakažete razgledanje",
