@@ -220,7 +220,15 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          
+          <Card className="w-full">
+  <CardHeader>
+    <CardTitle>Contact Information</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <p className="text-blue-800 font-bold text-xl">{contactInfo.phone}</p>
+    <p className="text-sm text-gray-600">Call hours: {contactInfo.callHours}</p>
+  </CardContent>
+</Card>
           {/* Contact Information */}
           <div className="bg-blue-50 p-4 rounded-lg mb-6">
             <h3 className="text-lg font-semibold mb-2">Contact Us to Arrange a Viewing</h3>
